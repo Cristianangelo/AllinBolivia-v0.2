@@ -1,0 +1,97 @@
+
+
+
+create table TipoUsuario(
+	Id int AUTO_INCREMENT,
+	Descripcion varchar(200),
+	primary key(Id)
+)
+ENGINE=InnoDB; -para mysql
+
+create table Rol(
+	Id int AUTO_INCREMENT,
+	Descripcion varchar(200),
+	primary key(Id)
+)
+ENGINE=InnoDB; -para mysql
+
+create table DetalleRol( --este es deralle roll
+	IdTipoUsuario int not null,
+	IdRol int not null,
+	primary key(IdTipoUsuario, IdRol),
+	foreign key(IdTipoUsuario) references TipoUsuario(Id),
+	foreign key(IdRol) references Rol(Id)
+)
+ENGINE=InnoDB; -para mysql
+
+create table Persona(
+	Id int AUTO_INCREMENT,
+	Nombres varchar(50),
+	Apellidos varchar(50),
+	Telefono int(12),
+	Login varchar(50),
+	Password varchar(50),
+	primary key(Id)
+)
+ENGINE=InnoDB; -para mysql
+
+create table Sesion(
+	Id int AUTO_INCREMENT,
+	Fecha DateTime,
+	Estado varchar(20),
+	IdPersona int,
+	primary key(Id),
+	foreign key(IdPersona) references Persona(Id) on update cascade on delete cascade	
+)
+ENGINE=InnoDB; -para mysql
+
+
+
+create table Categoria(
+	Id int AUTO_INCREMENT,
+	Nombre varchar(20),
+	Descripcion varchar(200),
+	primary key(Id)
+)
+ENGINE=InnoDB; -para mysql
+
+
+create table Equipo(
+	Id int AUTO_INCREMENT,
+	Nombre int,
+	primary key(Id)
+)
+ENGINE=InnoDB; -para mysql
+
+create table Evento( --se modifico esta clase y se elimina el detallevento
+	Id int AUTO_INCREMENT,
+	Descripcion varchar(200),
+	Fecha DateTime,
+	Estado varchar(20),
+	ResultadoA int,
+	ResultadoB int,
+	IdPersona int not null,
+	IdCategoria int not null,
+	IdEquipoA int not null,
+	IdEquipoB int not null,
+	primary key(Id),
+	foreign key(IdPersona) references Persona(Id) on update cascade on delete cascade	,
+	foreign key(IdCategoria) references Categoria(Id) on update cascade on delete cascade,	
+	foreign key(IdEquipoA) references Equipo(Id) on update cascade on delete cascade	,
+	foreign key(IdEquipoB) references Equipo(Id) on update cascade on delete cascade	
+)
+ENGINE=InnoDB; -para mysql
+
+
+
+create table Apuesta(
+	Id int AUTO_INCREMENT,
+	Monto int,
+	Fecha DateTime,
+	IdPersona int,
+	IdEvento int,
+	primary key(Id),
+	foreign key(IdPersona) references Persona(Id) on update cascade on delete cascade	,
+	foreign key(IdEvento) references Evento(Id) on update cascade on delete cascade	
+)
+ENGINE=InnoDB; -para mysql
