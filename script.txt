@@ -2,14 +2,14 @@
 
 
 create table TipoUsuario(
-	Id int AUTO_INCREMENT,
+	Id int Identity(1,1),
 	Descripcion varchar(200),
 	primary key(Id)
 )
 ENGINE=InnoDB; -para mysql
 
 create table Rol(
-	Id int AUTO_INCREMENT,
+	Id int Identity (1,1),
 	Descripcion varchar(200),
 	primary key(Id)
 )
@@ -25,10 +25,10 @@ create table DetalleRol( --este es deralle roll
 ENGINE=InnoDB; -para mysql
 
 create table Persona(
-	Id int AUTO_INCREMENT,
+	Id int Identity(1,1),
 	Nombres varchar(50),
 	Apellidos varchar(50),
-	Telefono int(12),
+	Telefono int,
 	Login varchar(50),
 	Password varchar(50),
 	primary key(Id)
@@ -36,7 +36,7 @@ create table Persona(
 ENGINE=InnoDB; -para mysql
 
 create table Sesion(
-	Id int AUTO_INCREMENT,
+	Id int Identity(1,1),
 	Fecha DateTime,
 	Estado varchar(20),
 	IdPersona int,
@@ -48,7 +48,7 @@ ENGINE=InnoDB; -para mysql
 
 
 create table Categoria(
-	Id int AUTO_INCREMENT,
+	Id int Identity(1,1),
 	Nombre varchar(20),
 	Descripcion varchar(200),
 	primary key(Id)
@@ -57,14 +57,14 @@ ENGINE=InnoDB; -para mysql
 
 
 create table Equipo(
-	Id int AUTO_INCREMENT,
+	Id int Identity(1,1),
 	Nombre int,
 	primary key(Id)
 )
 ENGINE=InnoDB; -para mysql
 
 create table Evento( --se modifico esta clase y se elimina el detallevento
-	Id int AUTO_INCREMENT,
+	Id int Identity(1,1),
 	Descripcion varchar(200),
 	Fecha DateTime,
 	Estado varchar(20),
@@ -76,7 +76,7 @@ create table Evento( --se modifico esta clase y se elimina el detallevento
 	IdEquipoB int not null,
 	primary key(Id),
 	foreign key(IdPersona) references Persona(Id) on update cascade on delete cascade	,
-	foreign key(IdCategoria) references Categoria(Id) on update cascade on delete cascade,	
+	foreign key(IdCategoria) references Categoria(Id) on update no action on delete no action,	
 	foreign key(IdEquipoA) references Equipo(Id) on update cascade on delete cascade	,
 	foreign key(IdEquipoB) references Equipo(Id) on update cascade on delete cascade	
 )
@@ -85,7 +85,7 @@ ENGINE=InnoDB; -para mysql
 
 
 create table Apuesta(
-	Id int AUTO_INCREMENT,
+	Id int Identity(1,1),
 	Monto int,
 	Fecha DateTime,
 	IdPersona int,
@@ -95,3 +95,6 @@ create table Apuesta(
 	foreign key(IdEvento) references Evento(Id) on update cascade on delete cascade	
 )
 ENGINE=InnoDB; -para mysql
+
+
+insert into Persona values ('Cristian', 'tordoya', '3527633', '123', '123')

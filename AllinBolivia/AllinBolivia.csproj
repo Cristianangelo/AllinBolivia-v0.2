@@ -125,7 +125,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\banner1.jpg" />
+    <Content Include="Images\ELIMINAR.png" />
+    <Content Include="Images\footer.png" />
+    <Content Include="Images\footer1.png" />
+    <Content Include="Images\GesCategoria.png" />
+    <Content Include="Images\GUARDAR.png" />
+    <Content Include="Images\NUEVO.png" />
+    <Content Include="Images\top1.png" />
     <Content Include="Presentacion\About.aspx" />
+    <Content Include="Presentacion\Categoria.aspx" />
+    <Content Include="Presentacion\GesCategoria.aspx" />
     <Content Include="Presentacion\Login.aspx" />
     <Content Include="Presentacion\Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -254,6 +264,20 @@
     </Compile>
     <Compile Include="Presentacion\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Categoria.aspx.cs">
+      <DependentUpon>Categoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Categoria.aspx.designer.cs">
+      <DependentUpon>Categoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\GesCategoria.aspx.cs">
+      <DependentUpon>GesCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\GesCategoria.aspx.designer.cs">
+      <DependentUpon>GesCategoria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -36,14 +36,20 @@
     </asp:ScriptManager>
     <header>
         <div class="content-wrapper">
-            <div class="float-left">
-                <p class="site-title">
-                    <a runat="server" href="~/">your logo here</a>
-                </p>
-            </div>
-            <div class="float-right">
-                <section id="login">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+            <center><img src="../Images/top1.png" /></center>
+            
+
+
+
+            <table width="1170px" border="0" align="center" cellpadding="0" cellspacing="0">
+          	<tr>
+            	<td width="34%" align="center" valign="middle"></td>
+            	<td width="45%" align="center" valign="middle"></td>
+	            <td width="21%" align="center" valign="middle">
+
+
+                     <section id="login">
+                    <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul>
                                 <li><a id="registerLink" runat="server" href="~/Presentacion/Register.aspx">Register</a></li>
@@ -52,21 +58,53 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <p>
-                                Hello, <a runat="server" class="username" href="~/Presentacion/Manage.aspx" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" /></a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                Hello, <a id="A1" runat="server" class="username" href="~/Presentacion/Manage.aspx" title="Manage your account">
+                                    <asp:LoginName ID="LoginName1" runat="server" CssClass="username" /></a>!
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
                             </p>
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </section>
-                <nav>
+
+	            </td>
+          	</tr>
+            
+            <tr>
+            	<td valign="middle" align="left"><nav>
                     <ul id="menu">
-                        <li><a runat="server" href="~/Presentacion/Default.aspx">Home</a></li>
-                        <li><a runat="server" href="~/Presentacion/About.aspx">About</a></li>
-                        <li><a runat="server" href="~/Presentacion/Contact.aspx">Contact</a></li>
+                        <li><a id="A2" runat="server" href="~/">Inicio</a></li>
+                        <li><a id="A3" runat="server" href="~/Presentacion/Lobby.aspx">Lobby</a></li>
+                        <li><a id="A4" runat="server" href="~/Presentacion/Contact.aspx">Contact</a></li>
                     </ul>
                 </nav>
-            </div>
+            	</td>
+            	<td valign="middle" </td>
+            	<td valign="middle"></td>
+          	</tr>
+            
+            
+            
+          </table>
+
+
+
+
+               
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </header>
     <div id="body">
@@ -77,9 +115,16 @@
     </div>
     <footer>
         <div class="content-wrapper">
-            <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </div>
+            <center>
+            <img src="../Images/banner1.jpg" />
+            <img src="../Images/footer1.png" /></center>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background: url(../images/bgfooter.png) repeat">
+              <tr>
+                <td>
+                    <center><img src="../Images/footer.png"/></center>
+                </td>
+              </tr>
+            </table>
         </div>
     </footer>
     </form>

@@ -1,11 +1,13 @@
 ﻿html {
-    background-color: #e2e2e2;
+    background-color: #ffffff;
+    background-image:url(../images/wall1.jpg);
+    background-position:top center;
+    background-repeat:no-repeat;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #fff;
     border-top: solid 10px #000;
     color: #333;
     font-size: .85em;
@@ -14,8 +16,21 @@ body {
     padding: 0;
 }
 
+
+.BodyTable{
+    padding:45px;
+}
+
+.Bodycelda {
+
+    padding-left:30px;
+    padding-right:22px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
 a {
-    color: #333;
+    color: #9c1e27;
     outline: none;
     padding-left: 3px;
     padding-right: 3px;
@@ -24,7 +39,7 @@ a {
 
     a:link, a:visited,
     a:active, a:hover {
-        color: #333;
+        color: #9c1e27;
     }
 
     a:hover {
@@ -48,6 +63,10 @@ mark {
 
 .float-right {
     float: right;
+}
+
+.float-center {
+    float: none;
 }
 
 .clear-fix:after {
@@ -94,11 +113,11 @@ h5, h6 {
 ----------------------------------------------------------*/
 .content-wrapper {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: unset;
 }
 
 #body {
-    background-color: #efeeef;
+
     clear: both;
     padding-bottom: 35px;
 }
@@ -119,7 +138,6 @@ header .content-wrapper {
     
 footer {
     clear: both;
-    background-color: #e2e2e2;
     font-size: .8em;
     height: 100px;
 }
@@ -182,7 +200,7 @@ ul#menu {
     font-weight: 600;
     margin: 0 0 5px;
     padding: 0;
-    text-align: right;
+    text-align: left;
 }
 
     ul#menu li {
@@ -407,13 +425,11 @@ fieldset {
         font-size: 1.2em;
         margin: 5px 0 6px 0;
         padding: 5px;
-        width: 300px;
-    }
+        }
 
     textarea {
         font-family: inherit;
-        width: 500px;
-    }
+        }
     
         input:focus, textarea:focus {
             border: 1px solid #7ac0da;
@@ -553,14 +569,9 @@ th {
 		content: '▼';
 	}
 
-td {
-    padding: 0.25em 2em 0.25em 0em;
-    border: 0 none;
-}
 
-tr.pager td {
-    padding: 0 0.25em 0 0;
-}
+
+
 
 
 /********************
@@ -620,7 +631,7 @@ tr.pager td {
     ul#menu {
         margin: 0;
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
 
         ul#menu li {

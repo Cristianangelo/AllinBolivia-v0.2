@@ -44,5 +44,27 @@ namespace AllinBolivia.Negocio
             dcategoria.Descripcion1 = Descripcion;
             dcategoria.Guardar();
         }
+
+        public void Modificar()
+        {
+            dcategoria.Id1 = Id;
+            dcategoria.Nombre1 = Nombre;
+            dcategoria.Descripcion1 = Descripcion;
+            dcategoria.Modificar();
+        }
+        public void Eliminar()
+        {
+            dcategoria.Id1 = Id;
+            dcategoria.Eliminar();
+        }
+
+        public List<DCategoria> ObtenerCategorias()
+        {
+            return dcategoria.ObtenerCategorias();
+        }
+        public DCategoria ObtenerCategoria(int i)
+        {
+            return dcategoria.ObtenerCategoria(i);
+        }
     }
 }

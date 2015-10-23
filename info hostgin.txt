@@ -1,0 +1,10 @@
+somee (cuenta)
+
+allinbolivia
+Bolivia123
+chachapumaplan@gmail.com
+
+somee db
+name	allinbolivia
+
+workstation id=allinbolivia.mssql.somee.com;packet size=4096;user id=allinbolivia_SQLLogin_1;pwd=3rgzosqqfg;data source=allinbolivia.mssql.somee.com;persist security info=False;initial catalog=allinbolivia
